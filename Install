@@ -1,0 +1,16 @@
+1. Java Cryptography Extension (JCE) installieren
+
+Java 8:
+http://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html
+Java 7:
+http://www.oracle.com/technetwork/java/embedded/embedded-se/downloads/jce-7-download-432124.html
+
+2. Files entpacken
+
+3. java.exe -jar aesutil.jar ausführen (oder run.bat starten)
+
+4. Passwort, Verzeichnis, Datei angeben
+
+5. Verschlüsselte Datei ist im gleichen Verzeichnis wie Ursprungsdatei zu finden, mit der Extension .aes
+
+6. Ins prime importieren :-)
