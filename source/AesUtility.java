@@ -3,7 +3,6 @@ package de.ucb.prime.util;
 
 import java.io.IOException;
 import java.io.OutputStream;
-import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -24,40 +23,11 @@ public class AesUtility
     private static final String PASSWD = "myKey123$";
     
     private static final String BASE_DIR = "C:/test";
-	
-	// Eingabestrom
-    static InputStreamReader input  = new InputStreamReader(System.in);
- 
-    // Eingabepuffer
-    static BufferedReader keyboardInput = new BufferedReader(input);
+     
      
     public static void main(String[] args) throws Exception
     {
-        String PASSWD_input;
- 
-        System.out.print("Passwort: ");
- 
-        // hier wird auf Eingaben gewartet ..
-        PASSWD_input = keyboardInput.readLine();
-		
-		String BASE_DIR_input;
-        System.out.print("Verzeichnis: ");
-		
-		        // hier wird auf Eingaben gewartet ..
-        BASE_DIR_input = keyboardInput.readLine();
-
-		String FILE_NAME_input;
-        System.out.print("Dateiname: ");
-		
-		        // hier wird auf Eingaben gewartet ..
-        FILE_NAME_input = keyboardInput.readLine();
-		String FILE_NAME_output;
-		FILE_NAME_output = FILE_NAME_input + ".aes";
-        System.out.println("Datei:" + BASE_DIR_input + "/" + FILE_NAME_input);
-		        System.out.println("Dateiausgabe:" + BASE_DIR_input + "/" + FILE_NAME_output);
-		 System.out.println("Passwort: " + PASSWD_input);
-				
-		encrypt(PASSWD_input, Paths.get(BASE_DIR_input, FILE_NAME_input), Paths.get(BASE_DIR, FILE_NAME_output));
+        encrypt(PASSWD, Paths.get(BASE_DIR, "input.txt"), Paths.get(BASE_DIR, "output.aes"));
         
     }
 
